@@ -27,8 +27,7 @@ namespace buhoLector
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            Editorial ventana = new Editorial();
-            ventana.ShowDialog();
+            MessageBox.Show("Servidores fuera de servicio");
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
