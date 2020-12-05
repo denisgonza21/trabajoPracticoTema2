@@ -1,0 +1,24 @@
+﻿<Window x:Class="buhoLector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:buhoLector"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="450" Width="800" Foreground="{x:Null}" Background="{x:Null}">
+    <DockPanel Margin="0,0,2,1" Background="#FFD31414">
+        <Menu x:Name="MenuPrincipal" Width="790" Margin="0,10" Foreground="#FF212121">
+            <MenuItem Header="Definiciones">
+                <MenuItem Header="Editorial" Click="MenuItem_Click" />
+                <MenuItem Header="Autor" Click="MenuItem_Click_1" />
+                <MenuItem Header="Cliente" Click="MenuItem_Click_3"/>
+                <MenuItem Header="Libro" Click="MenuItem_Click_4"/>
+            </MenuItem>
+            <MenuItem Header="Operaciones">
+                <MenuItem Header="Prestamos" Click="MenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="Salir" Click="MenuItem_Click_2">
+            </MenuItem>
+        </Menu>
+    </DockPanel>
+</Window>

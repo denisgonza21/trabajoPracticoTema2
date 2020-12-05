@@ -1,0 +1,49 @@
+﻿<Window x:Class="buhoLector.Libro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:buhoLector"
+        mc:Ignorable="d"
+       Title="Libros" Height="688.667" Width="496.332" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Canvas Margin="0,0,-7,-6.667">
+        <GroupBox Header="Datos del Libro" Canvas.Left="10" Canvas.Top="15" Height="288" Width="466">
+            <Grid Margin="0,0,0,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Id" HorizontalAlignment="Right" Margin="0 0 5 0"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Nombre" HorizontalAlignment="Right" Margin="0,10,5,22" Grid.RowSpan="2"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="Autor" HorizontalAlignment="Right" Margin="0,12,5,5"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="Cant. Ejemplares" HorizontalAlignment="Right" Margin="0,2,5,-4"/>
+
+                <TextBox Grid.Column="1" Grid.Row="0" x:Name="txtId" Width="120" Height="20" HorizontalAlignment="Left" IsReadOnly="True" TabIndex="1"/>
+                <TextBox Grid.Column="1" Grid.Row="4" x:Name="txtejemplares" Width="120" Height="20" HorizontalAlignment="Left" IsReadOnly="False" Margin="0,12,0,13" TabIndex="4"/>
+                <TextBox Grid.Column="1" Grid.Row="1" x:Name="txtNombre" Width="120" Height="20" HorizontalAlignment="Left" IsReadOnly="False" Margin="0,10,0,15" TabIndex="2"/>
+                <Label Grid.Column="0" Grid.Row="5" Content="Cant. Disponible" HorizontalAlignment="Right" Margin="0,1,5,-3"/>
+                <TextBox Grid.Column="1" Grid.Row="5" x:Name="txtdisponible" Width="120" Height="20" HorizontalAlignment="Left" IsReadOnly="False" Margin="0,11,0,14" TabIndex="4"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Editorial" HorizontalAlignment="Right" Margin="0,44,5,33" Grid.RowSpan="3"/>
+                <ComboBox Grid.Column="1" Grid.Row="2" x:Name="cboEditorial" Margin="3,0,0,5" RenderTransformOrigin="0.659,1.882"/>
+                <ComboBox Grid.Column="1" Grid.Row="3" x:Name="cboAutor" Margin="0,12,3,8" RenderTransformOrigin="0.659,1.882"/>
+
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="Libros Existentes" Canvas.Left="10" Canvas.Top="308" Height="308" Width="466">
+            <DataGrid x:Name="dtgLibro" MouseDoubleClick="DtgEditorial_MouseDoubleClick"/>
+        </GroupBox>
+        <Button x:Name="btnEliminarDenis" Content="Eliminar" Canvas.Left="129" Canvas.Top="621" Click="BtnEliminarDenis_Click"/>
+        <Button x:Name="btnModificarDenis" Content="Modificar" Canvas.Left="227" Canvas.Top="621" Click="BtnModificarDenis_Click"/>
+        <Button x:Name="btnGuardarDenis" Content="Guardar" Canvas.Left="333" Canvas.Top="621" Click="BtnGuardarDenis_Click"/>
+    </Canvas>
+</Window>
